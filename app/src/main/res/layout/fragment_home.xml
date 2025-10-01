@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
@@ -19,8 +19,9 @@
             android:dividerPadding="8dp"
             android:showDividers="middle">
 
+            <!-- Full Name -->
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="Full Name"
+                android:hint="@string/notary_form_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputEditText
@@ -29,8 +30,9 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Address -->
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="Address"
+                android:hint="@string/notary_form_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputEditText
@@ -39,8 +41,9 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- DOB -->
             <com.google.android.material.textfield.TextInputLayout
-                android:hint="Date of Birth (MM/DD/YYYY)"
+                android:hint="@string/notary_form_address_date_of_birth_mm_dd_yyyy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputEditText
@@ -50,43 +53,38 @@
                     android:inputType="date"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/dropdownIdType"
+            <!-- ID Type Spinner -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Select ID Type"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"/>
+                android:text="@string/notary_form_select_id_type"
+                android:paddingTop="8dp"/>
+            <Spinner
+                android:id="@+id/spinnerIdType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-            <AutoCompleteTextView
-                android:id="@+id/dropdownNotaryType"
+            <!-- Notarization Type Spinner -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Select Notarization Type"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"/>
+                android:text="@string/notary_form_select_notarization_type"
+                android:paddingTop="8dp"/>
+            <Spinner
+                android:id="@+id/spinnerNotaryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
+            <!-- Submit Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"/>
+                android:text="@string/notary_form_submit"/>
         </LinearLayout>
     </ScrollView>
 
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+<!--    CAMERA-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -94,6 +92,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:contentDescription="@string/open_camera_button"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

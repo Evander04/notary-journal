@@ -10,4 +10,11 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="notary_form_full_name">Full Name</string>
+    <string name="notary_form_address">Address</string>
+    <string name="notary_form_address_date_of_birth_mm_dd_yyyy">Date of Birth (MM/DD/YYYY)</string>
+    <string name="notary_form_select_id_type">Select ID Type</string>
+    <string name="notary_form_select_notarization_type">Select Notarization Type</string>
+    <string name="notary_form_submit">Submit</string>
+    <string name="open_camera_button">open camera button</string>
 </resources>
