@@ -33,9 +33,6 @@ import java.util.Locale
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     private val scanLauncher = registerForActivityResult(
